@@ -62,7 +62,7 @@ router.post("/login", checkUsernameExists, (req, res, next) => {
 function buildToken(user) {
   const payload = {
     subject: user.user_id,
-    role_name: role.role_name,
+    role_name: user.role_name,
     username: user.username,
   }
   const options = {
